@@ -31,11 +31,11 @@
 ]{texgyretermes}
 
 \RequirePackage[
-	a4paper,
-	left=0.8in,
-	right=0.8in,
-	top=0.70in,
-	bottom=0.55in,
+	letterpaper,
+	left=0.5in,
+	right=0.5in,
+	top=0.4in,
+	bottom=0.2in,
 	nohead
 ]{geometry}
 

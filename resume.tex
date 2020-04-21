@@ -1,48 +1,80 @@
 \documentclass{resume}
 %\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+%\usepackage[top=0.5in, bottom=0.5in]{geometry}
+% \addtolength{\oddsidemargin}{-10in}
+% \addtolength{\evensidemargin}{-10in}
+% \addtolength{\textwidth}{20in}
+%\documentstyle[fullpage]{article}
 
 %Shout out to https://github.com/billryan/resume for providing this amazing resume template!
-
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
 \name{Hanchi Zhang}
 
 \basicInfo{
-  	\email{tonyzhc@umich.ed} \textperiodcentered\ 
+  	\email{tonyzhc@umich.edu} \textperiodcentered\ 
  	\phone{(+1) 734-882-7007} \textperiodcentered\ 
  	\linkedin[tonyhanchizhang]{https://www.linkedin.com/in/tonyhanchizhang} \textperiodcentered\
- 	\github[tonyzhc]{https://github.com/tonyzhc}} 
+	% \github[tonyzhc]{https://github.com/tonyzhc} \textperiodcentered\ 
+	\homepage[tonyzhc.github.io]{https://tonyzhc.github.io/}
+} 
 
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{University of Michigan Ann Arbor}, Ann Arbor, MI}{Sept. 2017 - May 2020}
-\textit{B.S.} in Computer Science / Data Science \hfill GPA 3.84/4.00 
+\datedsubsection{\textbf{University of Michigan}, Ann Arbor, MI}{Expected May 2021}
+\textit{B.S.E.} in Computer Science \& Data Science \hfill GPA 3.75/4.00  \\
+% \textbf{Relevant coursework}: EECS 482 (Intro to Operating System) / EECS 491 (Intro to Distributed System) / EECS 381 (Object Oriented and Advanced Programming) / EECS 484 (Database Management System)
+\textbf{Relevant coursework}: Intro to Operating System / Intro to Distributed System / Object Oriented and Advanced Programming / Database Management System
 %Relevant Courses: Intro to Operating System / Intro to Computer Security / Database System Management
 
 \section{\faUsers\ Experience}
-\datedsubsection{\textbf{University of Michigan Database Research Group} Ann Arbor, MI}{Apr. 2019 - Present}
-\role{Research Assistant}{Python / pytorch}
-\vspace{-1ex}
+\datedsubsection{\textbf{Google Cloud Platform} Sunnyvale, CA}{Expected May - Aug. 2020}
+\role{Incoming Software Engineer Intern}{C++}
+\vspace{-2ex}
 \begin{itemize}
-	\item Implemented a video database that improves querying time of the user given model by \%.
-	\item Trained multiple binary CNN classifiers 
+	\item Will work under the Spanner team, a globally distributed database
 \end{itemize}
+
+\datedsubsection{\textbf{University of Michigan Systems Lab} Ann Arbor, MI}{Apr. 2019 - Present}
+\role{Research Assistant, advised by Prof. Michael Cafarella}{Python / pytorch}
+\vspace{-2ex}
+\begin{itemize}
+	\item Utilized Python and pyTorch to implement a video database to optimize user-provided pre-trained machine learning model's querying time of per-frame data by building 1.3 million cascades of 360 simple convolutional neural networks
+	\item Achieved an optimization of speeding up user querying time by 7 times with 93\% accuracy comparing to naive solution
+	%\item Implemented a video database that improves querying time of the user given model by 7 times with 93\% accuracy by constructing and choosing from 1.3 million cascades composing of 360 smaller classifiers
+	%\item Shifted metric from accuracy to precision to eliminate 40\% of false positives produced by original method
+	\item Processed 4GB of highly noisy csv files to train and fine-tune multiple LSTM classifiers that achieved 75\% near accuracy %and average absolute error of 6 dollars per 225,000 product
+\end{itemize}
+
+% \datedsubsection{\textbf{Chemical Engineering at University of Michigan} Ann Arbor, MI}{Apr. 2019 -- Present}
+% \role{Websites Manager}{HTML / CSS / javascript / React}
+% \vspace{-2ex}
+% \begin{itemize}
+% 	\item Refactored legacy pages by converting pure HTML pages to React components and utilized emotion.sh to improve styling
+% 	\item Seperated contents from styling by storing contents on local json files and enabled easier modification of website contents
+% 	% \item Set up webpack / babel hooks to bundle javascript files and embed them into original pages to achieve automatic updates
+% \end{itemize}
+% \vspace{-1ex}
+% %\textit{Checkout the websites \href{http://umich.edu/~elements/5e/index.html}{\underline{here}} and \href{http://umich.edu/~safeche/}{\underline{here}}}
+% \textit{View the websites} \underline{http://umich.edu/\textasciitilde elements/5e/index.html} \textit{and} \underline{http://umich.edu/\textasciitilde safeche/}
 
 \datedsubsection{\textbf{Perch Research} Ann Arbor, MI}{Dec. 2018 -- Present}
-\role{Frontend Developer}{HTML / CSS / javascript / React}
-\vspace{-1ex}
+\role{Frontend Developer}{HTML / CSS / javascript / React / Redux}
+\vspace{-2ex}
 \begin{itemize}
-	\item Developed frontend components such as an editable profile tab for a website using libraries including emotion.sh and styled for inline css styling improving file structure of the project
-	\item Utilized React Hooks API to restructure componenets declared as classes to functions with useState / useReducer to eliminate unnecessary code structure achieve better code readability and reusability
+	\item Developed platform responsive frontend pages and components utilizing React / Redux and media query function of CSS
+	\item Adapted to React Hooks API to restructure components declared as classes to functions with useState / useEffect to avoid complex syntactic characteristics of javaScript class and achieve better code readability and reusability
+	\item Utilized Youtube API to build a component that enables user to upload and display introductory video with polling support
+	%\item Utilized Redux to keep track of complex state changes in components such as a search page
 \end{itemize}
 
-\datedsubsection{\textbf{Beijing Xiaomi Technology}}{Jun. 2018 -- Aug. 2018}
-\role{Summer Software Development Intern}{Python / Java}
-\vspace{-1ex}
+\datedsubsection{\textbf{Xiaomi Technology} Beijing, China}{Jun. 2018 -- Aug. 2018}
+\role{Software Development Intern}{Python / Java}
+\vspace{-2ex}
 \begin{itemize}
-	\item Developed an Android app demo providing intelligent sketch of MIUI users' daily behaviors e.g. app usage
-	\item Set up a simulated server to communicate dummy data with the app using Python and flask
+	\item Developed a multi-activity Android app demo providing intelligent sketch of MIUI users' daily behaviors e.g. app usage
+	\item Set up a simulated backend and API endpoint to serve dummy data to the app using Python and flask and store login info
   	\item Optimized the hyperparameters of a deep neural network of the ad system and increased the AUC by 1\%
  	\item Implemented more complex neural network structures such as RNN/W\&D and tested their performance
 \end{itemize}
@@ -54,36 +86,44 @@
 %  \item main contribution
 %\end{itemize}
 
+\section{\faWrench\ Projects}
+\datedsubsection{\textbf{Distributed Key-Value Store} \small{Go}}{Nov. 2019}
+\begin{itemize}
+	\item Implemented a sharded key-value store that distributes its keys across servers with a central Paxos-based shard master
+	\item Build a Paxos library that allows customized definition of operations such that servers reach agreement on a series of logs
+	\item Gracefully dealt with the problem of repeated RPC calls such that server space does not shrink as request number increase
+\end{itemize}
+
+\datedsubsection{\textbf{U of M Blue Bus Time Checker } \small{Python / pyQuery / AWS} }{Feb. 2019}
+% A Makeathon event project sponsored by Amazon co-developed under 24 hours
+\begin{itemize}
+	\item Developed the backend of an Alexa skill that informs user the time of the next bus and the time to walk to the closest stop 
+	\item Built an API endpoint that uses Google Matrix APIs and scraped data from the blue bus website to provide correct info
+	\item Utilized a python library \href{https://github.com/aws/chalice}{\underline{Chalice}} to deploy the backend service as a stateless function to AWS Lambda
+	% \item Provided data by writing a simple crawler that utilizes requests / pyQuery / BS4 to access the bus time
+\end{itemize}
+\vspace{-1.5ex}
+% \textit{Our project was published as a \href{https://medium.com/voice-tech-podcast/alexa-when-is-the-next-bus-620e1aba9474}{\underline{Medium blog}} by a participating Amazon Solution Architect \href{https://www.linkedin.com/in/jpd44/}{\underline{John Dixon}}}
+
+% \datedsubsection{\textbf{Multithreaded Library / Disk Scheduler }  \small{C++} }{Jan. 2019 -- Feb. 2019}
+% \begin{itemize}
+% 	\item Implemented a thread library utilizing linux system infrastructures including context and atomic that supports multithreading across multiple simulated CPU cores including interface for mutex and condition queue
+% 	\item Implemented a disk scheduler program that reads a series of input representing the track number of disk requests that will be executed synchronously by a disk servicer
+% \end{itemize}
+
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C++, C, Python, Java, HTML, CSS,  javascript, SQL, \LaTeX, Swift (Limited)
-  \item Tools: Git, Bash, Tensorflow, React, Node.js, jQuery
-  \item Other: Fluent in Chinese and English
+  \item Programming Languages: C++, C, Python, Go, HTML, CSS, javascript, Java, SQL, \LaTeX
+  \item Tools \& Framework: Git, Bash, PyTorch, React, Node.js, jQuery
+  %\item Other: Fluent in Chinese and English
 \end{itemize}
 
-\section{\faWrench\ Projects}
-\datedsubsection{\textbf{U of M Blue Bus Time Checker } \small{Python / pyQuery / AWS} }{Feb. 2019}
-A Makeathon event project sponsored by Amazon co-developed under 24 hours
-\begin{itemize}
-	\item Developed a fully-deployable / demo-able Alexa skill that informs user the time of the next bus the user can catch and the time to walk to the closest bus station utilizing Google Matrix APIs
-	\item Utilized a python library \href{https://github.com/aws/chalice}{\underline{Chalice}} to develop a backend API that can be accessed in the frontend python script and can be easily deployed to AWS Lambda
-	\item Provided data by writing a simple crawler that utilizes requests / pyQuery / BS4 to access the bus time
-\end{itemize}
-\textit{Our project was published as a \href{https://medium.com/voice-tech-podcast/alexa-when-is-the-next-bus-620e1aba9474}{\underline{Medium blog}} by a participating Amazon Solution Architect \href{https://www.linkedin.com/in/jpd44/}{\underline{John Dixon}}}
-
-\datedsubsection{\textbf{Multithreaded Library / Disk Scheduler }  \small{C++} }{Jan. 2019 -- Feb. 2019}
-\begin{itemize}
-	\item Implemented a thread library utilizing linux system infrastructures including ucontext.h that supports multithreading across multiple simulated CPU cores
-	\item Provided full multithreading support for library interfaces such as and mutex/condition queue
-	\item Implemented a disk scheduler program that reads a series of input representing the track number of disk requests that will be executed synchronously by a disk servicer
-\end{itemize}
-
-\datedsubsection{\textbf{Movie Archive Tracker }  \small{C++} }{Sept. 2018 -- Oct. 2018}
-\begin{itemize}
-\item Implemented a thread library utilizing linux system infrastructures supporting multiple simulated CPUs
-\item Provided full multithreading support for library interfaces such as thread.join() and mutex/condition queue
-\item Implemented a disk scheduler program that reads a series of input representing the track number of disk requests that will be executed synchronously by a disk servicer in SSTF order
-\end{itemize}
+% \datedsubsection{\textbf{Movie Archive Tracker }  \small{C++} }{Sept. 2018 -- Oct. 2018}
+% \begin{itemize}
+% \item Implemented a thread library utilizing linux system infrastructures supporting multiple simulated CPUs
+% \item Provided full multithreading support for library interfaces such as thread.join() and mutex/condition queue
+% \item Implemented a disk scheduler program that reads a series of input representing the track number of disk requests that will be executed synchronously by a disk servicer in SSTF order
+% \end{itemize}
 
 %% Reference
 %\newpage
